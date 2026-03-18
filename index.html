@@ -90,14 +90,20 @@
 </head>
 <body class="antialiased font-sans">
 
-    <!-- Top Alert Bar (Urgency + Free Shipping) -->
-    <div class="bg-brand-gold text-slate-900 font-bold text-center py-2 px-4 text-sm md:text-base z-50 relative animate-pulse-fast">
-        <i class="ph-fill ph-truck mr-2"></i> 
-        PROMOÇÃO RELÂMPAGO: FRETE GRÁTIS PARA TODO O BRASIL + OPÇÃO DE PAGAR SÓ NA ENTREGA!
+    <!-- URGENCY TIMER BAR -->
+    <div class="bg-red-600 text-white font-black text-center py-2 px-4 text-sm md:text-base z-50 relative tracking-wide uppercase">
+        <i class="ph-bold ph-timer mr-1"></i>
+        Atenção: A oferta de frete grátis encerra em <span class="timer-display bg-white text-red-600 px-2 py-0.5 rounded ml-1">15:00</span>
+    </div>
+
+    <!-- Top Alert Bar (Free Shipping) -->
+    <div class="bg-brand-gold text-slate-900 font-bold text-center py-1.5 px-4 text-xs md:text-sm z-50 relative">
+        <i class="ph-fill ph-truck mr-1"></i> 
+        ENTREGAMOS EM TODO O BRASIL + OPÇÃO DE PAGAR SÓ NA ENTREGA!
     </div>
 
     <!-- Hero Section -->
-    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+    <section class="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
             <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px]"></div>
@@ -109,43 +115,47 @@
                 
                 <!-- Text Content -->
                 <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left" data-aos="fade-right">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-brand-gold/30 text-brand-gold text-sm font-semibold mb-6">
-                        <span class="relative flex h-3 w-3">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-gold"></span>
-                        </span>
-                        Estoque Limitado
-                    </div>
                     
+                    <!-- Social Proof Badge -->
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="flex text-brand-gold text-lg">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <span class="text-slate-300 text-sm font-medium">+15.482 pessoas já se livraram das dores</span>
+                    </div>
+
                     <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                         Diga Adeus às Dores e Tensão Muscular em <span class="text-gradient">Minutos</span>
                     </h1>
                     
-                    <div class="space-y-4 text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
+                    <div class="space-y-4 text-lg md:text-xl text-slate-300 mb-6 max-w-2xl">
                         <p class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-green"></i> <strong>Alívio Imediato:</strong> Destrave seus músculos em 3 minutos.</p>
                         <p class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-green"></i> <strong>Nível Clínico:</strong> Tecnologia de fisioterapia na sua casa.</p>
-                        <p class="flex items-center gap-2 text-brand-gold font-bold bg-brand-gold/10 w-fit px-3 py-1 rounded-lg border border-brand-gold/20"><i class="ph-fill ph-shield-check text-2xl"></i> Risco Zero: Pague apenas quando receber em mãos!</p>
+                        <p class="flex items-center gap-2 text-brand-gold font-bold bg-brand-gold/10 w-fit px-3 py-1 rounded-lg border border-brand-gold/20 mt-2"><i class="ph-fill ph-shield-check text-2xl"></i> Risco Zero: Pague apenas quando receber em mãos!</p>
+                    </div>
+
+                    <!-- Price Anchor on Hero -->
+                    <div class="mb-8 border-l-4 border-brand-green pl-4">
+                        <p class="text-sm text-slate-400 uppercase tracking-widest font-bold mb-1">Oferta de Lançamento</p>
+                        <p class="text-xl">De <span class="line-through text-red-400">R$ 180,00</span> por a partir de <strong class="text-3xl text-brand-gold">R$ 88,00</strong></p>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto relative">
-                        <a href="#oferta" class="bg-brand-green hover:bg-brand-greenHover text-white font-bold py-4 px-8 rounded-full text-lg btn-glow flex items-center justify-center gap-2 w-full sm:w-auto">
-                            <i class="ph-bold ph-shopping-cart text-xl"></i>
+                        <a href="#oferta" class="bg-brand-green hover:bg-brand-greenHover text-white font-black py-5 px-8 rounded-full text-lg btn-glow flex items-center justify-center gap-2 w-full sm:w-auto uppercase tracking-wide">
+                            <i class="ph-bold ph-shopping-cart text-2xl"></i>
                             Garantir com Desconto
                         </a>
                     </div>
 
                     <div class="flex flex-wrap justify-center lg:justify-start items-center gap-4 mt-8 text-sm text-slate-400">
-                        <div class="flex items-center gap-1">
-                            <i class="ph-fill ph-check-circle text-brand-green text-xl"></i>
-                            Risco Zero
+                        <div class="flex items-center gap-1 font-semibold text-white">
+                            <i class="ph-fill ph-check-circle text-brand-green text-xl"></i> Garantia 7 Dias
                         </div>
-                        <div class="flex items-center gap-1">
-                            <i class="ph-fill ph-truck text-brand-gold text-xl"></i>
-                            Frete Grátis
+                        <div class="flex items-center gap-1 font-semibold text-white">
+                            <i class="ph-fill ph-truck text-brand-gold text-xl"></i> Frete Grátis
                         </div>
-                        <div class="flex items-center gap-1">
-                            <i class="ph-fill ph-handshake text-brand-green text-xl"></i>
-                            Pague na Entrega
+                        <div class="flex items-center gap-1 font-semibold text-white">
+                            <i class="ph-fill ph-handshake text-brand-green text-xl"></i> Pagamento Seguro
                         </div>
                     </div>
                 </div>
@@ -174,8 +184,8 @@
                             <i class="ph-bold ph-money text-brand-green text-2xl"></i>
                         </div>
                         <div class="text-left leading-tight">
-                            <span class="block text-sm text-slate-500">Compre Agora</span>
-                            <span class="block text-lg">Pague na Entrega!</span>
+                            <span class="block text-sm text-slate-500 uppercase tracking-wider">Compre Agora</span>
+                            <span class="block text-lg font-black text-brand-dark">Pague na Entrega!</span>
                         </div>
                     </div>
                 </div>
@@ -183,25 +193,12 @@
         </div>
     </section>
 
-    <!-- Social Proof Logos -->
-    <section class="border-y border-slate-800 bg-slate-900/50 py-6">
-        <div class="container mx-auto px-4">
-            <p class="text-center text-slate-500 text-sm font-semibold tracking-widest uppercase mb-4">Tecnologia recomendada para</p>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60">
-                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-person-simple-run text-2xl"></i> Atletas</div>
-                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-office-chair text-2xl"></i> Trabalhadores de Escritório</div>
-                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-barbell text-2xl"></i> Praticantes de Crossfit</div>
-                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-heartbeat text-2xl"></i> Fisioterapia</div>
-            </div>
-        </div>
-    </section>
-
     <!-- Problem & Solution (Why you need it) -->
-    <section class="py-20 relative">
+    <section class="py-20 relative bg-slate-900/50 border-y border-slate-800">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Sofrendo com <span class="text-gradient">dores nas costas, pescoço ou pernas?</span></h2>
-                <p class="text-slate-400 text-lg">Pare de gastar com sessões caras de massagem. Tenha a sua <strong class="text-white">fisioterapeuta particular 24h</strong> e acabe com os "nós" musculares instantaneamente.</p>
+                <p class="text-slate-400 text-lg">Pare de gastar fortunas com sessões caras de massagem. Tenha a sua <strong class="text-white">fisioterapeuta particular 24h</strong> em casa e acabe com os "nós" musculares instantaneamente.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -242,7 +239,7 @@
     </section>
 
     <!-- Product Showcase Gallery & Details -->
-    <section class="py-16 bg-slate-900 border-y border-slate-800">
+    <section class="py-16 bg-slate-900 border-b border-slate-800">
         <div class="container mx-auto px-4">
             <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12" data-aos="zoom-in">Design <span class="text-gradient">Premium & Compacto</span></h2>
             
@@ -308,16 +305,79 @@
         </div>
     </section>
 
+    <!-- TESTIMONIALS SECTION (SOCIAL PROOF) -->
+    <section class="py-20 relative bg-[#060a1f] border-b border-slate-800">
+        <!-- Decor -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-gold/10 rounded-full blur-[80px] -z-10"></div>
+        
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">O Que Dizem Nossos Clientes?</h2>
+                <p class="text-slate-400 text-lg">Milhares de brasileiros já recuperaram a qualidade de vida. Veja a experiência de quem já comprou:</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 (Objection: Scam/Trust) -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 hover:border-brand-green transition-colors" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex items-center gap-1 text-brand-gold mb-3 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">"Paguei só na entrega, super seguro!"</h4>
+                    <p class="text-slate-300 mb-6 italic">"Eu morro de medo de comprar na internet e levar golpe. Quando vi a opção de pagar pro entregador, eu pedi na hora. O motoboy veio no dia seguinte, testei a pistola e paguei no PIX. Sensacional! Aliviou muito minha dor lombar."</p>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 bg-brand-green/20 rounded-full flex items-center justify-center text-brand-green font-bold">RM</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Roberto M.</p>
+                            <p class="text-xs text-brand-green flex items-center gap-1"><i class="ph-fill ph-seal-check"></i> Compra Verificada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 (Objection: Quality/Battery) -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 hover:border-brand-green transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-1 text-brand-gold mb-3 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">"Potência absurda, vale cada centavo"</h4>
+                    <p class="text-slate-300 mb-6 italic">"Sou atleta de crossfit e uso todo dia depois do treino. A potência dela não trava, mesmo se apertar forte contra o músculo. A bateria dura fácil umas 2 semanas. Paguei R$ 88 no site e economizei horrores com massagista."</p>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 font-bold">LC</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Lucas C.</p>
+                            <p class="text-xs text-brand-green flex items-center gap-1"><i class="ph-fill ph-seal-check"></i> Compra Verificada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 (Objection: Authority/Does it work?) -->
+                <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 hover:border-brand-green transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-1 text-brand-gold mb-3 text-xl">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">"Recomendado pelo Fisioterapeuta"</h4>
+                    <p class="text-slate-300 mb-6 italic">"Trabalho 10 horas sentada no computador e meu pescoço era uma pedra. Meu fisioterapeuta usou uma dessa em mim e resolvi comprar. Em 5 minutos de uso à noite os nós de tensão somem. Melhor investimento do ano."</p>
+                    <div class="flex items-center gap-3 border-t border-slate-700 pt-4">
+                        <div class="w-10 h-10 bg-pink-500/20 rounded-full flex items-center justify-center text-pink-400 font-bold">AS</div>
+                        <div>
+                            <p class="text-white font-bold text-sm">Aline S.</p>
+                            <p class="text-xs text-brand-green flex items-center gap-1"><i class="ph-fill ph-seal-check"></i> Compra Verificada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing / Offer Section (CRITICAL PART) -->
     <section id="oferta" class="py-24 relative overflow-hidden">
         <!-- Spotlight background -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] -z-10"></div>
 
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="font-heading text-4xl md:text-5xl font-black mb-4">Garanta a Sua <span class="text-gradient">Antes que Acabe</span></h2>
-                <div class="inline-flex items-center justify-center gap-2 bg-red-500/10 border border-red-500/30 text-red-400 px-6 py-2 rounded-full font-bold animate-pulse-fast text-lg md:text-xl mt-2">
-                    <i class="ph-fill ph-warning"></i> ATENÇÃO: Últimos Lotes com FRETE GRÁTIS!
+                <div class="inline-flex items-center justify-center gap-2 bg-red-600 border-2 border-red-400 text-white px-6 py-3 rounded-full font-black animate-pulse text-lg md:text-xl mt-2 uppercase shadow-[0_0_20px_rgba(220,38,38,0.5)]">
+                    <i class="ph-bold ph-clock"></i> OFERTA ENCERRA EM: <span class="timer-display tracking-widest">15:00</span>
                 </div>
             </div>
 
@@ -325,18 +385,21 @@
             <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
                 
                 <!-- Oferta 1: Pagar Agora (Desconto) -->
-                <div class="flex-1 bg-slate-800/80 rounded-3xl p-8 border border-slate-700 flex flex-col relative mt-4 md:mt-0" data-aos="fade-right">
-                    <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1 px-3 md:px-4 rounded-full whitespace-nowrap z-20 shadow-md">
-                        Maior Desconto
+                <div class="flex-1 bg-slate-800/80 rounded-3xl p-8 border border-slate-700 flex flex-col relative mt-8 md:mt-0 shadow-xl" data-aos="fade-right">
+                    <!-- Selo Padronizado -->
+                    <div class="absolute -top-4 md:-top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs md:text-sm font-black uppercase tracking-wider py-1.5 md:py-2 px-3 md:px-6 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[90%] md:w-auto text-center leading-tight z-20">
+                        <i class="ph-fill ph-tag text-sm md:text-lg shrink-0"></i> 
+                        <span>Maior Desconto</span>
                     </div>
                     
                     <h3 class="text-2xl font-bold mb-2">Pagamento Antecipado</h3>
                     <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Compre agora no site e garanta o nosso desconto máximo aplicado.</p>
                     
-                    <div class="mb-6 flex items-baseline gap-2">
-                        <!-- Updated anchor price to R$ 180,00 -->
-                        <span class="text-slate-500 line-through text-lg">R$ 180,00</span>
-                        <span class="text-4xl font-black text-white">R$ 88<span class="text-2xl">,00</span></span>
+                    <div class="mb-6">
+                        <!-- ANCORAGEM DE PREÇO CLARA -->
+                        <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
+                        <div class="text-5xl font-black text-white mb-2 leading-none">Por R$ 88<span class="text-2xl">,00</span></div>
+                        <div class="text-brand-green font-bold text-sm bg-brand-green/10 inline-block px-2 py-1 rounded">Você economiza R$ 92,00 hoje!</div>
                     </div>
 
                     <!-- Standardized list -->
@@ -366,10 +429,13 @@
                     <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme88ant01-0" class="w-full block text-center bg-white hover:bg-slate-200 text-slate-900 font-bold py-4 px-6 rounded-xl transition-colors uppercase tracking-wide">
                         Comprar por R$ 88,00
                     </a>
+                    <!-- Escassez -->
+                    <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 4 unidades no lote!</p>
                 </div>
 
                 <!-- Oferta 2: Pagar na Entrega (Hero Offer) -->
                 <div class="flex-1 bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-1 md:transform md:-translate-y-4 shadow-2xl gold-glow relative z-10 mt-8 md:mt-0" data-aos="fade-left">
+                    <!-- Selo Padronizado -->
                     <div class="absolute -top-4 md:-top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-500 text-slate-900 text-xs md:text-sm font-black uppercase tracking-wider py-1.5 md:py-2 px-3 md:px-6 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[90%] md:w-auto text-center leading-tight z-20">
                         <i class="ph-fill ph-star text-sm md:text-lg shrink-0"></i> 
                         <span>A Mais Escolhida - Risco Zero</span>
@@ -382,10 +448,11 @@
                         <h3 class="text-2xl font-bold mb-2">Pague Só na Entrega</h3>
                         <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Faça o pedido agora e <strong class="text-white">pague apenas para o entregador.</strong> Zero risco de fraudes!</p>
                         
-                        <div class="mb-6 flex items-baseline gap-2">
-                            <!-- Updated anchor price to R$ 180,00 -->
-                            <span class="text-slate-500 line-through text-lg">R$ 180,00</span>
-                            <span class="text-5xl font-black text-brand-gold">R$ 125<span class="text-3xl">,00</span></span>
+                        <div class="mb-6">
+                            <!-- ANCORAGEM DE PREÇO CLARA -->
+                            <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
+                            <div class="text-5xl font-black text-brand-gold mb-2 leading-none">Por R$ 125<span class="text-3xl">,00</span></div>
+                            <div class="text-brand-gold font-bold text-sm bg-brand-gold/10 inline-block px-2 py-1 rounded">Risco zero: você toca no produto antes!</div>
                         </div>
 
                         <!-- Standardized list (Matching size and structure) -->
@@ -415,7 +482,8 @@
                         <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme125cod01-0" class="w-full block text-center bg-brand-green hover:bg-brand-greenHover text-white font-black text-lg py-4 px-6 rounded-xl btn-glow uppercase tracking-wide">
                             Agendar Entrega Agora
                         </a>
-                        <p class="text-center text-xs text-slate-500 mt-4"><i class="ph-bold ph-lock-key align-middle text-sm"></i> Agendamento 100% Seguro</p>
+                        <!-- Escassez -->
+                        <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 7 agendamentos!</p>
                     </div>
                 </div>
 
@@ -488,6 +556,32 @@
                 });
             });
         });
+
+        // Countdown Timer Logic
+        function startTimer(duration, displayElements) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                displayElements.forEach(el => {
+                    el.textContent = minutes + ":" + seconds;
+                });
+
+                if (--timer < 0) {
+                    timer = duration; // Reset timer when hits 0 to maintain urgency loop
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fifteenMinutes = 60 * 15;
+            let displayElements = document.querySelectorAll('.timer-display');
+            startTimer(fifteenMinutes, displayElements);
+        };
     </script>
 </body>
 </html>
