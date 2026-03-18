@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pistola Massageadora Profissional - Alívio Imediato</title>
+    <title>Pistola Massageadora Profissional | Alívio Imediato</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -17,427 +27,423 @@
                     },
                     colors: {
                         brand: {
-                            purple: '#6B21A8', /* Roxo mais forte/elegante */
-                            purpleLight: '#9333EA',
-                            gold: '#F59E0B', /* Dourado mais vivo para conversão */
-                            dark: '#0F172A',
+                            dark: '#0f172a', // slate-900
+                            gold: '#fbbf24', // amber-400
+                            green: '#10b981', // emerald-500
+                            greenHover: '#059669', // emerald-600
                         }
                     },
                     animation: {
-                        'pulse-fast': 'pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
                     }
                 }
             }
         }
     </script>
+
     <style>
-        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        /* Impede qualquer imagem de esticar e mantém no tamanho original máximo */
-        img { max-width: 100%; height: auto; object-fit: contain; }
+        body {
+            background-color: #020617; /* slate-950 */
+            color: #f8fafc; /* slate-50 */
+            overflow-x: hidden;
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #fbbf24, #f59e0b);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.9);
+            transform: scale(1.05);
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+        }
+        
+        /* Hide scrollbar for gallery */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden selection:bg-brand-purple selection:text-white">
+<body class="antialiased font-sans">
 
-    <!-- TOP BAR - URGÊNCIA E RECIPROCIDADE -->
-    <div class="bg-red-600 text-white text-center py-2 px-4 text-xs md:text-sm font-bold tracking-wide sticky top-0 z-50 shadow-md flex justify-center items-center gap-2">
-        <i class="fas fa-exclamation-triangle animate-pulse"></i>
-        <span>ALERTA DE ESTOQUE: ÚLTIMAS 17 UNIDADES COM FRETE GRÁTIS!</span>
-        <div id="countdown" class="bg-black/30 px-2 py-1 rounded text-yellow-300 font-mono tracking-widest ml-2">14:59</div>
+    <!-- Top Alert Bar (Urgency + Free Shipping) -->
+    <div class="bg-brand-gold text-slate-900 font-bold text-center py-2 px-4 text-sm md:text-base z-50 relative animate-pulse-fast">
+        <i class="ph-fill ph-truck mr-2"></i> 
+        PROMOÇÃO RELÂMPAGO: FRETE GRÁTIS PARA TODO O BRASIL + OPÇÃO DE PAGAR SÓ NA ENTREGA!
     </div>
 
-    <!-- HERO SECTION - ATENÇÃO E PROMESSA -->
-    <header class="bg-brand-dark text-white pt-12 pb-20 px-4 relative overflow-hidden">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-            
-            <!-- Copy Matadora -->
-            <div class="space-y-6">
-                <div class="inline-flex items-center gap-2 bg-brand-gold/20 text-brand-gold border border-brand-gold font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">
-                    <i class="fas fa-star"></i> Escolha dos Consumidores 2026
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-brand-green/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                
+                <!-- Text Content -->
+                <div class="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left" data-aos="fade-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border-brand-gold/30 text-brand-gold text-sm font-semibold mb-6">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-gold opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-gold"></span>
+                        </span>
+                        Estoque Limitado
+                    </div>
+                    
+                    <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+                        Diga Adeus às Dores e Tensão Muscular em <span class="text-gradient">Minutos</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl">
+                        A Pistola Massageadora Profissional que acelera sua recuperação, alivia o estresse e solta a musculatura. <strong class="text-white">O melhor de tudo? Você pode escolher pagar apenas quando o produto chegar nas suas mãos!</strong>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                        <a href="#oferta" class="bg-brand-green hover:bg-brand-greenHover text-white font-bold py-4 px-8 rounded-full text-lg btn-glow flex items-center justify-center gap-2 w-full sm:w-auto">
+                            <i class="ph-bold ph-shopping-cart"></i>
+                            Garantir com Desconto
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-4 mt-8 text-sm text-slate-400">
+                        <div class="flex items-center gap-1">
+                            <i class="ph-fill ph-check-circle text-brand-green text-xl"></i>
+                            Risco Zero
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="ph-fill ph-truck text-brand-gold text-xl"></i>
+                            Frete Grátis
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <i class="ph-fill ph-handshake text-brand-green text-xl"></i>
+                            Pague na Entrega
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Video Content -->
+                <div class="lg:w-1/2 w-full relative" data-aos="fade-left">
+                    <div class="relative rounded-2xl overflow-hidden gold-glow border-2 border-brand-gold/30 shadow-2xl z-10 animate-float bg-black aspect-[9/16] max-w-[350px] mx-auto">
+                        <video 
+                            src="pme.mp4" 
+                            autoplay 
+                            loop 
+                            muted 
+                            playsinline
+                            class="w-full h-full object-cover">
+                        </video>
+                        <!-- Overlay gradient for better integration -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-0 w-full text-center px-4">
+                            <p class="text-white font-bold text-lg drop-shadow-md">Alívio Imediato e Profundo</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-2 md:right-10 bg-white text-slate-900 font-bold py-3 px-6 rounded-xl shadow-xl z-20 flex items-center gap-3 border-b-4 border-brand-gold transform rotate-[-3deg] hover:rotate-0 transition-transform">
+                        <div class="bg-green-100 p-2 rounded-full">
+                            <i class="ph-bold ph-money text-brand-green text-2xl"></i>
+                        </div>
+                        <div class="text-left leading-tight">
+                            <span class="block text-sm text-slate-500">Compre Agora</span>
+                            <span class="block text-lg">Pague na Entrega!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Logos -->
+    <section class="border-y border-slate-800 bg-slate-900/50 py-6">
+        <div class="container mx-auto px-4">
+            <p class="text-center text-slate-500 text-sm font-semibold tracking-widest uppercase mb-4">Tecnologia recomendada para</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60">
+                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-person-simple-run"></i> Atletas</div>
+                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-office-chair"></i> Trabalhadores de Escritório</div>
+                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-barbell"></i> Praticantes de Crossfit</div>
+                <div class="flex items-center gap-2 font-heading font-bold text-xl"><i class="ph-fill ph-heartbeat"></i> Fisioterapia</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution (Why you need it) -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Sofrendo com <span class="text-gradient">dores nas costas, pescoço ou pernas?</span></h2>
+                <p class="text-slate-400 text-lg">A rotina cansativa e os treinos intensos acumulam tensão nos músculos, gerando nós e dores insuportáveis. A Pistola Massageadora é a sua fisioterapeuta particular, disponível 24h por dia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="glass-panel p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-brand-gold/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="ph-fill ph-gauge text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">6 Velocidades</h3>
+                    <p class="text-slate-400 text-sm">Ajuste inteligente de potência. Desde uma massagem relaxante até liberação miofascial profunda.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="glass-panel p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-brand-gold/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="ph-fill ph-battery-charging text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bateria 1800mAh</h3>
+                    <p class="text-slate-400 text-sm">Alta capacidade de longa duração. Use por horas sem precisar recarregar constantemente.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="glass-panel p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-brand-gold/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="ph-fill ph-lightning text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Torque de 65kg/cm</h3>
+                    <p class="text-slate-400 text-sm">Motor potente e silencioso que penetra profundamente no tecido muscular.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="glass-panel p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto bg-brand-gold/20 rounded-full flex items-center justify-center mb-4">
+                        <i class="ph-fill ph-arrows-out text-3xl text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">4 Ponteiras Inclusas</h3>
+                    <p class="text-slate-400 text-sm">Versatilidade total. Uma cabeça de massagem específica para cada grupo muscular.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Gallery & Details -->
+    <section class="py-16 bg-slate-900 border-y border-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-12" data-aos="zoom-in">Design <span class="text-gradient">Premium & Compacto</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div data-aos="fade-right">
+                    <img src="pme (7).webp" alt="Dimensões da Pistola" class="w-full max-w-md mx-auto rounded-xl shadow-2xl gold-glow">
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Leve com você para qualquer lugar</h3>
+                    <p class="text-slate-400 mb-6 text-lg">Com dimensões perfeitas (20cm x 13cm) e design leve, você pode levá-la na bolsa de academia, mochila ou mala de viagem sem pesar.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-bold ph-check text-brand-green text-xl mt-1"></i>
+                            <span><strong>Visor Digital:</strong> Acompanhe o nível de bateria e velocidade facilmente.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="ph-bold ph-check text-brand-green text-xl mt-1"></i>
+                            <span><strong>Carregamento Prático:</strong> Acompanha cabo de carregamento para plugar em notebooks, powerbanks ou adaptadores.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Heads Explanation -->
+            <div class="mt-20">
+                <h3 class="text-center text-2xl font-bold mb-10">Conheça as 4 Cabeças de Massagem</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-slate-800 p-4 rounded-xl text-center border border-slate-700 hover:border-brand-gold transition-colors" data-aos="flip-left" data-aos-delay="0">
+                        <img src="pme (6).webp" alt="Ponteira Esférica" class="w-full h-auto object-cover rounded-lg mb-4 mix-blend-screen opacity-80">
+                        <h4 class="font-bold text-brand-gold">Esférica</h4>
+                        <p class="text-xs text-slate-400 mt-2">Para grandes grupos musculares (costas, pernas, peito).</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-xl text-center border border-slate-700 hover:border-brand-gold transition-colors" data-aos="flip-left" data-aos-delay="100">
+                        <img src="pme (2).webp" alt="Ponteira em U" class="w-full h-auto object-cover rounded-lg mb-4 mix-blend-screen opacity-80" style="object-position: center bottom;">
+                        <h4 class="font-bold text-brand-gold">Formato em 'U'</h4>
+                        <p class="text-xs text-slate-400 mt-2">Foco na coluna vertebral e tendão de Aquiles.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-xl text-center border border-slate-700 hover:border-brand-gold transition-colors" data-aos="flip-left" data-aos-delay="200">
+                        <img src="pme (4).webp" alt="Ponteira Plana" class="w-full h-auto object-cover rounded-lg mb-4 mix-blend-screen opacity-80">
+                        <h4 class="font-bold text-brand-gold">Plana</h4>
+                        <p class="text-xs text-slate-400 mt-2">Relaxamento profundo e modelagem para todo o corpo.</p>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-xl text-center border border-slate-700 hover:border-brand-gold transition-colors" data-aos="flip-left" data-aos-delay="300">
+                        <img src="pme (5).webp" alt="Ponteira Bala" class="w-full h-auto object-cover rounded-lg mb-4 mix-blend-screen opacity-80">
+                        <h4 class="font-bold text-brand-gold">Formato Bala</h4>
+                        <p class="text-xs text-slate-400 mt-2">Para tecidos profundos, articulações e soltura de "nós".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Carousel/Gallery -->
+            <div class="mt-20 overflow-x-auto hide-scrollbar flex gap-4 pb-8" data-aos="fade-up">
+                <img src="pme (1).webp" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0" alt="Produto 1">
+                <img src="pme (3).webp" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0" alt="Produto 3">
+                <img src="pme (4).webp" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0" alt="Produto 4">
+                <img src="pme (5).webp" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0" alt="Produto 5">
+            </div>
+            <p class="text-center text-sm text-slate-500 mt-2"><i class="ph-bold ph-arrows-left-right"></i> Deslize para ver mais detalhes</p>
+        </div>
+    </section>
+
+    <!-- Pricing / Offer Section (CRITICAL PART) -->
+    <section id="oferta" class="py-24 relative overflow-hidden">
+        <!-- Spotlight background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] -z-10"></div>
+
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-black mb-4">Escolha a Melhor <span class="text-gradient">Opção Para Você</span></h2>
+                <p class="text-xl text-slate-300">Não importa a sua escolha, o <strong class="text-brand-gold">Frete é Grátis</strong> para todo o Brasil!</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
                 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black leading-tight text-shadow">
-                    O Fim das Dores Musculares em <span class="text-brand-gold whitespace-nowrap">Apenas 5 Minutos!</span>
-                </h1>
-                
-                <p class="text-lg md:text-xl text-gray-300 leading-relaxed font-medium">
-                    A Pistola de Terapia Percussiva que destrói nódulos de tensão, acelera a recuperação e devolve o seu bem-estar. 
-                </p>
-                
-                <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                    <a href="#ofertas" class="flex-1 text-center bg-green-500 hover:bg-green-600 text-white font-bold text-lg md:text-xl py-4 px-6 rounded-xl shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all transform hover:-translate-y-1 animate-pulse-fast">
-                        <i class="fas fa-shopping-cart mr-2"></i> GARANTIR MEU DESCONTO
+                <!-- Oferta 1: Pagar Agora (Desconto) -->
+                <div class="flex-1 bg-slate-800/80 rounded-3xl p-8 border border-slate-700 flex flex-col relative" data-aos="fade-right">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full">
+                        Maior Desconto
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Pagamento Antecipado</h3>
+                    <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Compre agora via PIX ou Cartão e ganhe o desconto máximo.</p>
+                    
+                    <div class="mb-6 flex items-baseline gap-2">
+                        <span class="text-slate-500 line-through text-lg">R$ 249,90</span>
+                        <span class="text-4xl font-black text-white">R$ 88<span class="text-2xl">,00</span></span>
+                    </div>
+
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-green"></i> Pistola Massageadora Completa</li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-green"></i> 4 Cabeças de Massagem</li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-green"></i> Cabo de Carregamento</li>
+                        <li class="flex items-center gap-3 font-bold text-brand-gold"><i class="ph-fill ph-truck text-brand-gold"></i> Frete Grátis</li>
+                        <li class="flex items-center gap-3"><i class="ph-fill ph-credit-card text-brand-green"></i> Aceita PIX e Cartão</li>
+                    </ul>
+
+                    <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme88ant01-0" class="w-full block text-center bg-white hover:bg-slate-200 text-slate-900 font-bold py-4 px-6 rounded-xl transition-colors">
+                        Comprar por R$ 88,00
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-gray-400 font-medium">
-                    <span class="flex items-center"><i class="fas fa-shield-check text-green-400 mr-1"></i> Risco Zero</span>
-                    <span class="flex items-center"><i class="fas fa-truck text-brand-gold mr-1"></i> Frete Grátis</span>
-                    <div class="flex items-center gap-1 text-yellow-400">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        <span class="text-gray-400 ml-1">(4.9/5)</span>
+                <!-- Oferta 2: Pagar na Entrega (Hero Offer) -->
+                <div class="flex-1 bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-1 md:transform md:-translate-y-4 shadow-2xl gold-glow relative z-10" data-aos="fade-left">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-500 text-slate-900 text-sm font-black uppercase tracking-wider py-2 px-6 rounded-full shadow-lg flex items-center gap-2 whitespace-nowrap">
+                        <i class="ph-fill ph-star"></i> A Mais Escolhida - Risco Zero
+                    </div>
+                    
+                    <div class="bg-slate-900 rounded-[22px] p-8 h-full flex flex-col relative overflow-hidden">
+                        <!-- BG Effect -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-green/10 rounded-full blur-[50px]"></div>
+
+                        <h3 class="text-2xl font-bold mb-2">Pague Só na Entrega</h3>
+                        <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Faça seu pedido agora, receba em casa e <strong class="text-white">pague apenas para o entregador.</strong> Zero risco de golpes!</p>
+                        
+                        <div class="mb-6 flex items-baseline gap-2">
+                            <span class="text-slate-500 line-through text-lg">R$ 249,90</span>
+                            <span class="text-5xl font-black text-brand-gold">R$ 125<span class="text-3xl">,00</span></span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-green"></i> Pistola Massageadora Completa</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-check-circle text-brand-green"></i> 4 Cabeças de Massagem</li>
+                            <li class="flex items-center gap-3 font-bold text-white"><i class="ph-fill ph-shield-check text-brand-green"></i> Segurança Total: Só pague se receber</li>
+                            <li class="flex items-center gap-3 font-bold text-brand-gold"><i class="ph-fill ph-truck text-brand-gold"></i> Frete Grátis Todo Brasil</li>
+                            <li class="flex items-center gap-3"><i class="ph-fill ph-money text-brand-green"></i> Pague em Dinheiro ou PIX na porta de casa</li>
+                        </ul>
+
+                        <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme125cod01-0" class="w-full block text-center bg-brand-green hover:bg-brand-greenHover text-white font-black text-lg py-5 px-6 rounded-xl btn-glow uppercase tracking-wide">
+                            Agendar Entrega Agora
+                        </a>
+                        <p class="text-center text-xs text-slate-500 mt-4"><i class="ph-bold ph-lock-key"></i> Agendamento 100% Seguro</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Produto e Vídeo (Visual) -->
-            <div class="relative flex flex-col items-center gap-4">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700 bg-black w-full max-w-sm">
-                    <video class="w-full object-contain aspect-[9/16]" autoplay muted loop playsinline controls>
-                        <source src="pistola-massageadora-pme.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!-- Imagem 7 limpa -->
-                <div class="absolute -bottom-10 -right-4 md:-right-10 w-40 md:w-48 bg-white rounded-xl shadow-2xl p-2 border-2 border-brand-gold transform rotate-6 hover:rotate-0 transition-transform hidden sm:block flex justify-center">
-                    <img src="pistola-massageadora-pme (7).png" alt="Pistola Design Premium" class="w-auto mx-auto">
-                    <p class="text-center text-black text-xs font-bold mt-1">Design Premium</p>
-                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Objections -->
+    <section class="py-16 bg-slate-900/50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-10">Dúvidas Frequentes</h2>
             
-        </div>
-        <!-- BG Gradients -->
-        <div class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brand-dark via-brand-dark to-brand-purple opacity-90 -z-0"></div>
-    </header>
-
-    <!-- AGITAÇÃO DO PROBLEMA (Empatia e Dor) -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-center text-gray-900 mb-10">Você Sente o Seu Corpo "Travado"?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="bg-red-50 p-4 rounded-2xl border border-red-100 shadow-inner flex justify-center">
-                    <!-- Imagem 3 (Dores) mantida no tamanho original centralizada -->
-                    <img src="pistola-massageadora-pme (3).png" alt="Pontos de dor no corpo" class="rounded-xl w-auto mx-auto block">
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up">
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold"></i> Como funciona o "Pague na Entrega"?</h4>
+                    <p class="text-slate-400">É muito simples! Ao clicar no botão de "Agendar Entrega", você preencherá seus dados de endereço. Nós enviaremos o produto para sua casa sem cobrar nada agora. Quando o entregador chegar, você confere e realiza o pagamento de R$ 125,00 diretamente para ele.</p>
                 </div>
-                
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Dores no pescoço após horas no celular, lombar travada pelo trabalho em escritório, pernas pesadas ou tensão pós-treino... <strong>A dor drena a sua energia e o seu humor.</strong>
-                    </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Remédios apenas mascaram o problema temporariamente e sessões de massagem profissional custam caro (mais de R$ 150 por sessão!). 
-                    </p>
-                    <div class="bg-brand-dark text-white p-5 rounded-xl shadow-lg border-l-4 border-brand-gold">
-                        <h4 class="font-bold text-xl mb-2 text-brand-gold">A Solução Definitiva:</h4>
-                        <p>A tecnologia percussiva atinge até <strong>12mm de profundidade</strong> no músculo, liberando a fáscia e aumentando o fluxo sanguíneo. O alívio não é uma promessa, é ciência!</p>
-                    </div>
+                <!-- FAQ 2 -->
+                <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold"></i> O Frete é realmente grátis?</h4>
+                    <p class="text-slate-400">Sim! Nós arcamos com todos os custos de envio para qualquer cidade do Brasil. Você paga apenas o valor do produto escolhido na oferta.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-slate-800 p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold"></i> Por que o pagamento antecipado é mais barato?</h4>
+                    <p class="text-slate-400">A modalidade de pagamento na entrega gera custos extras de logística e taxas de operadora de transporte para a nossa empresa. Ao escolher pagar no checkout (R$ 88,00), nós economizamos essas taxas e repassamos esse desconto integralmente para você!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AUTORIDADE E APLICAÇÃO -->
-    <section class="py-16 px-4 bg-gray-100">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-gray-900 mb-4">Aprovada por Atletas, Perfeita para Você</h2>
-                <div class="w-24 h-1 bg-brand-purple mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="order-2 md:order-1 space-y-6">
-                    <h3 class="text-2xl font-bold text-brand-purple">Recuperação e Performance</h3>
-                    <p class="text-gray-700">Seja você um atleta de alta performance (lutadores, corredores, crossfitters) ou alguém que busca relaxar após um dia cansativo de trabalho, esta pistola se adapta perfeitamente ao seu corpo.</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i> <strong>Acelera a recuperação:</strong> Reduz o ácido lático.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i> <strong>Melhora a mobilidade:</strong> Solta as articulações.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i> <strong>Relaxamento profundo:</strong> Melhora a qualidade do sono.</li>
-                    </ul>
-                </div>
-                <!-- Imagem 5 (Atletas/Aplicações) mantida no tamanho original centralizada -->
-                <div class="order-1 md:order-2 bg-white p-4 rounded-2xl shadow-xl border border-gray-200 flex justify-center">
-                    <img src="pistola-massageadora-pme (5).png" alt="Aplicação em diversas áreas do corpo" class="w-auto mx-auto rounded-xl block">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECNOLOGIA / FEATURES (Benefícios) -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-center text-gray-900 mb-12">Tudo o Que Você Precisa em um Único Aparelho</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Imagem 6 (6 Níveis / Benefícios) -->
-                <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (6).png" alt="6 níveis de intensidade" class="mb-4 h-48 w-auto">
-                    <h4 class="font-bold text-xl text-center mb-2">6 Níveis de Potência</h4>
-                    <p class="text-center text-sm text-gray-600">Ajuste perfeitamente a força percussiva, do nível mais suave para o pescoço até o nível máximo para pernas e glúteos.</p>
-                </div>
-
-                <!-- Imagem 9 (Painel / Design) -->
-                <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (9).png" alt="Painel e ponteiras" class="mb-4 h-48 w-auto">
-                    <h4 class="font-bold text-xl text-center mb-2">Motor Silencioso e Inteligente</h4>
-                    <p class="text-center text-sm text-gray-600">Tecnologia anti-ruído avançada. Faça a sua massagem assistindo à TV ou no escritório sem incomodar ninguém.</p>
-                </div>
-
-                <!-- Imagem 2 (Bateria / Conexão) -->
-                <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (2).png" alt="Bateria e Carregamento" class="mb-4 h-48 w-auto">
-                    <h4 class="font-bold text-xl text-center mb-2">Bateria de Longa Duração</h4>
-                    <p class="text-center text-sm text-gray-600">Bateria de lítio de 1800mAh. Carregamento universal via cabo USB para você recarregar facilmente em qualquer lugar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DIMENSÕES E PONTEIRAS -->
-    <section class="py-16 px-4 bg-brand-dark text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Ponteiras (Imagens 1) -->
+    <!-- Guarantee -->
+    <section class="py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 max-w-3xl mx-auto text-center md:text-left">
+                <i class="ph-fill ph-seal-check text-7xl text-brand-gold drop-shadow-[0_0_15px_rgba(251,191,36,0.5)]"></i>
                 <div>
-                    <h2 class="text-3xl font-heading font-extrabold mb-6 text-brand-gold">Uma Clínica de Massagem na Sua Mão</h2>
-                    <p class="mb-8 text-gray-300">Acompanha 4 ponteiras intercambiáveis feitas de material premium para atingir cada grupo muscular da maneira correta.</p>
-                    
-                    <div class="bg-white p-4 rounded-xl flex justify-center">
-                        <!-- Imagem 1 no tamanho original -->
-                        <img src="pistola-massageadora-pme (1).png" alt="As 4 Ponteiras" class="w-auto mx-auto block">
-                    </div>
-                </div>
-
-                <!-- Compacta (Imagem 4) -->
-                <div class="space-y-8">
-                    <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
-                        <h3 class="text-xl font-bold mb-4 text-center">Design Compacto e Ergonômico</h3>
-                        <!-- Imagem 4 -->
-                        <div class="bg-white rounded-xl p-4 flex justify-center">
-                            <img src="pistola-massageadora-pme (4).png" alt="Dimensões 23x13cm" class="w-auto max-h-64 mx-auto block">
-                        </div>
-                        <p class="text-center text-gray-400 mt-4 text-sm">Apenas 23cm x 13cm. Perfeita para levar na bolsa da academia ou na mala de viagem.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PROVA SOCIAL (Depoimentos) -->
-    <section class="py-16 px-4 bg-gray-50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-center text-gray-900 mb-10">O que os nossos clientes dizem:</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Review 1 -->
-                <div class="bg-white p-6 rounded-xl shadow border border-gray-100 relative">
-                    <div class="flex text-yellow-400 mb-3 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-700 text-sm mb-4 italic">"Comprei com a opção de pagar na entrega porque morro de medo de golpe. Chegou em menos de 24 horas! A pistola é super forte e salvou a minha lombar. Recomendo muito!"</p>
-                    <p class="font-bold text-sm text-gray-900">- Marcos T., São Paulo/SP</p>
-                    <i class="fas fa-check-circle text-green-500 absolute top-6 right-6" title="Compra Verificada"></i>
-                </div>
-                <!-- Review 2 -->
-                <div class="bg-white p-6 rounded-xl shadow border border-gray-100 relative">
-                    <div class="flex text-yellow-400 mb-3 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="text-gray-700 text-sm mb-4 italic">"Faço crossfit e vivia com dores. Essa maquininha é milagrosa. Paguei no PIX para pegar o desconto de R$ 88 e valeu cada centavo. A bateria dura semanas."</p>
-                    <p class="font-bold text-sm text-gray-900">- Juliana R., Curitiba/PR</p>
-                    <i class="fas fa-check-circle text-green-500 absolute top-6 right-6" title="Compra Verificada"></i>
-                </div>
-                <!-- Review 3 -->
-                <div class="bg-white p-6 rounded-xl shadow border border-gray-100 relative">
-                    <div class="flex text-yellow-400 mb-3 text-sm">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="text-gray-700 text-sm mb-4 italic">"Excelente custo-benefício. Vi umas na internet por 400 reais, e essa faz o mesmo serviço por uma fração do preço. Chegou bem embalada com todas as pontas."</p>
-                    <p class="font-bold text-sm text-gray-900">- Roberto M., Belo Horizonte/MG</p>
-                    <i class="fas fa-check-circle text-green-500 absolute top-6 right-6" title="Compra Verificada"></i>
+                    <h3 class="text-2xl font-bold mb-2">Garantia de Satisfação</h3>
+                    <p class="text-slate-400">Seja pagando agora ou pagando na entrega, você está protegido pela nossa garantia incondicional de 7 dias. Se não gostar do produto, devolvemos seu dinheiro. Simples e sem burocracia.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EMPILHAMENTO DE VALOR (Apresentação da Oferta) -->
-    <section class="py-12 bg-white">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="border-4 border-brand-purple rounded-3xl p-6 md:p-10 bg-brand-purple/5 relative overflow-hidden">
-                <!-- Imagem 8 (Kit completo) -->
-                <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-                    <div class="w-full md:w-1/2">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Veja tudo o que você vai receber hoje:</h3>
-                        <ul class="space-y-3 font-medium text-gray-700">
-                            <li class="flex justify-between border-b border-gray-200 pb-2">
-                                <span><i class="fas fa-check text-green-500 mr-2"></i> 1x Pistola Profissional</span>
-                                <span class="text-gray-400 line-through">R$ 180,00</span>
-                            </li>
-                            <li class="flex justify-between border-b border-gray-200 pb-2">
-                                <span><i class="fas fa-check text-green-500 mr-2"></i> 4x Ponteiras de Massagem</span>
-                                <span class="text-green-600 font-bold">BRINDE</span>
-                            </li>
-                            <li class="flex justify-between border-b border-gray-200 pb-2">
-                                <span><i class="fas fa-check text-green-500 mr-2"></i> 1x Cabo de Carregamento USB</span>
-                                <span class="text-green-600 font-bold">BRINDE</span>
-                            </li>
-                            <li class="flex justify-between pb-2">
-                                <span><i class="fas fa-truck text-brand-gold mr-2"></i> Frete Expresso Brasil</span>
-                                <span class="text-green-600 font-bold">GRÁTIS</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="w-full md:w-1/2 bg-white p-4 rounded-xl shadow-md border border-gray-100 flex justify-center">
-                        <img src="pistola-massageadora-pme (8).png" alt="O que vem na caixa" class="w-auto mx-auto block">
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <p class="text-lg text-gray-600 mb-1">Preço Normal: <span class="line-through text-red-500 font-bold">R$ 180,00</span></p>
-                    <p class="text-2xl font-black text-gray-900">HOJE: A partir de R$ 88,00!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING / AS DUAS OFERTAS (O GRANDE GATILHO) -->
-    <section id="ofertas" class="py-16 px-4 bg-gray-900 relative">
-        <div class="max-w-6xl mx-auto relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-heading font-black text-white mb-4">Escolha a sua forma de pagamento</h2>
-                <p class="text-xl text-brand-gold font-bold">Risco Zero ou Maior Desconto. Você decide!</p>
-            </div>
-
-            <!-- Ajuste fino de padding interno (p-8) e heights flexíveis (flex-grow) para alinhar perfeitamente -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-                
-                <!-- OFERTA 1: PAGAR NA ENTREGA (Ancoragem) -->
-                <div class="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.5)] border-4 border-green-500 relative transform md:scale-105 z-20 flex flex-col">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-white font-black px-6 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-2 w-max">
-                        <i class="fas fa-shield-alt"></i> MAIS SEGURO - RISCO ZERO
-                    </div>
-                    
-                    <div class="p-8 text-center flex-grow mt-4">
-                        <h3 class="text-2xl font-bold text-gray-900">Pague ao Entregador</h3>
-                        <p class="text-gray-500 text-sm mt-2 mb-6">Peça agora sem cartão. <strong>Entregamos em até 24 horas</strong> e você só tira o dinheiro do bolso quando estiver com o produto em mãos!</p>
-                        
-                        <div class="mb-2">
-                            <span class="text-gray-400 line-through text-sm">De R$ 180,00 por:</span>
-                        </div>
-                        <div class="flex justify-center items-start gap-1">
-                            <span class="text-2xl font-bold text-gray-900 mt-2">R$</span>
-                            <!-- Padronizado para text-6xl -->
-                            <span class="text-6xl font-black text-gray-900 tracking-tighter">125<span class="text-3xl">,00</span></span>
-                        </div>
-                        <p class="text-green-600 font-bold uppercase text-sm mt-2 tracking-widest"><i class="fas fa-truck"></i> Frete Grátis</p>
-                        
-                        <div class="h-px bg-gray-200 w-full my-6"></div>
-                        
-                        <ul class="text-left space-y-4 text-gray-700 font-medium">
-                            <li class="flex items-center"><i class="fas fa-stopwatch text-green-500 mr-3 text-lg"></i> Entrega Expressa em até 24 horas</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i> Pague em Dinheiro ou PIX</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i> Risco zero de golpes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="p-6 bg-gray-50 rounded-b-3xl mt-auto">
-                        <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme125cod01-0" class="flex flex-col items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-black text-xl py-5 px-4 rounded-2xl shadow-lg transition-transform transform hover:scale-105 animate-pulse-fast">
-                            <span>AGENDAR MINHA ENTREGA</span>
-                            <span class="text-xs font-normal mt-1 opacity-90">(Não pedimos dados de cartão)</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- OFERTA 2: PAGAR AGORA COM DESCONTO (Maior ancoragem) -->
-                <!-- Padronizado a borda para ficar harmônica e a opacidade -->
-                <div class="bg-gray-50 rounded-3xl shadow-2xl border-4 border-brand-purple flex flex-col z-10 relative mt-8 md:mt-0 transition-opacity">
-                    <div class="bg-brand-purple text-white text-center py-3 rounded-t-2xl text-sm font-bold uppercase tracking-widest">
-                        Maior Desconto (Antecipado)
-                    </div>
-                    
-                    <div class="p-8 text-center flex-grow">
-                        <h3 class="text-2xl font-bold text-gray-900">Pagar Agora (Site Seguro)</h3>
-                        <p class="text-gray-500 text-sm mt-2 mb-6">Pague no PIX ou Cartão agora e libere o nosso desconto máximo de fábrica.</p>
-                        
-                        <div class="mb-2">
-                            <span class="text-gray-400 line-through text-sm">De R$ 180,00 por:</span>
-                        </div>
-                        <div class="flex justify-center items-start gap-1">
-                            <span class="text-2xl font-bold text-brand-purple mt-2">R$</span>
-                            <!-- Padronizado para text-6xl -->
-                            <span class="text-6xl font-black text-brand-purple tracking-tighter">88<span class="text-3xl">,00</span></span>
-                        </div>
-                        <p class="text-green-600 font-bold uppercase text-sm mt-2 tracking-widest"><i class="fas fa-truck"></i> Frete Grátis</p>
-                        
-                        <div class="h-px bg-gray-200 w-full my-6"></div>
-                        
-                        <ul class="text-left space-y-4 text-gray-700 font-medium">
-                            <li class="flex items-center"><i class="fas fa-bolt text-brand-gold mr-3 text-lg"></i> <strong class="text-red-600 mr-1">R$ 92,00 DE DESCONTO</strong></li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-purple mr-3 text-lg"></i> Liberação Imediata do Pedido</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-brand-purple mr-3 text-lg"></i> Receba o Kit Completo</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="p-6 bg-gray-200 rounded-b-2xl mt-auto">
-                        <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme88ant01-0" class="flex flex-col items-center justify-center w-full bg-brand-dark hover:bg-black text-white font-black text-xl py-5 px-4 rounded-2xl shadow-lg transition-transform transform hover:scale-105">
-                            <span>COMPRAR COM DESCONTO</span>
-                            <span class="text-xs font-normal mt-1 opacity-90">(Pague R$ 88 agora)</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- GARANTIA E REVERSÃO DE RISCO TOTAL -->
-    <section class="py-12 px-4 bg-white border-b border-gray-200">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 justify-center">
-            <div class="w-32 h-32 flex-shrink-0 bg-brand-gold/10 rounded-full flex items-center justify-center">
-                <i class="fas fa-shield-alt text-6xl text-brand-gold"></i>
-            </div>
-            <div class="text-center md:text-left">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Garantia Incondicional de 7 Dias</h3>
-                <p class="text-gray-600">
-                    Seja qual for a forma de pagamento escolhida, você está 100% protegido. Teste a Pistola Massageadora na sua casa. Se você não sentir um alívio imediato nas suas dores ou não gostar do produto por qualquer motivo, nós devolvemos 100% do seu dinheiro. Sem burocracia.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-gray-950 text-gray-400 py-10 text-center text-sm border-t border-gray-900">
-        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
-            <h3 class="text-white text-xl font-bold mb-4 font-heading tracking-widest uppercase">Pistola Massageadora PME</h3>
-            
-            <div class="flex flex-wrap justify-center gap-6 mb-6">
-                <span class="flex items-center"><i class="fas fa-lock mr-2 text-green-500"></i> Checkout 100% Seguro</span>
-                <span class="flex items-center"><i class="fas fa-user-secret mr-2 text-green-500"></i> Dados Criptografados</span>
-                <span class="flex items-center"><i class="fas fa-undo mr-2 text-green-500"></i> Garantia de Devolução</span>
-            </div>
-
-            <p class="mb-4 text-xs max-w-2xl text-gray-500">
-                Aviso: Este produto é um aparelho massageador de percussão de alta performance focado no relaxamento muscular profundo e alívio de tensões. Imagens meramente ilustrativas.
-            </p>
-
-            <p>&copy; 2026 - Todos os direitos reservados. CNPJ Fictício - Brasil.</p>
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-slate-900">
+        <div class="container mx-auto px-4 text-center text-slate-600 text-sm">
+            <p class="mb-4">🔒 Compra 100% Segura e Criptografada.</p>
+            <p>&copy; 2026 Pistola Massageadora Oficial. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Script para o contador de escassez -->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        function startTimer(duration, display) {
-            let timer = duration, minutes, seconds;
-            setInterval(function () {
-                minutes = parseInt(timer / 60, 10);
-                seconds = parseInt(timer % 60, 10);
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
 
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    timer = duration; // reseta ou poderia travar em 00:00
-                }
-            }, 1000);
-        }
-
-        window.onload = function () {
-            let fifteenMinutes = 60 * 15,
-                display = document.querySelector('#countdown');
-            startTimer(fifteenMinutes, display);
-        };
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
