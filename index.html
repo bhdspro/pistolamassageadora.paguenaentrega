@@ -32,7 +32,7 @@
     </script>
     <style>
         .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        /* Impede qualquer imagem de esticar */
+        /* Impede qualquer imagem de esticar e mantém no tamanho original máximo */
         img { max-width: 100%; height: auto; object-fit: contain; }
     </style>
 </head>
@@ -87,8 +87,8 @@
                     </video>
                 </div>
                 <!-- Imagem 7 limpa -->
-                <div class="absolute -bottom-10 -right-4 md:-right-10 w-40 md:w-48 bg-white rounded-xl shadow-2xl p-2 border-2 border-brand-gold transform rotate-6 hover:rotate-0 transition-transform hidden sm:block">
-                    <img src="pistola-massageadora-pme (7).png" alt="Pistola Design Premium">
+                <div class="absolute -bottom-10 -right-4 md:-right-10 w-40 md:w-48 bg-white rounded-xl shadow-2xl p-2 border-2 border-brand-gold transform rotate-6 hover:rotate-0 transition-transform hidden sm:block flex justify-center">
+                    <img src="pistola-massageadora-pme (7).png" alt="Pistola Design Premium" class="w-auto mx-auto">
                     <p class="text-center text-black text-xs font-bold mt-1">Design Premium</p>
                 </div>
             </div>
@@ -104,9 +104,9 @@
             <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-center text-gray-900 mb-10">Você Sente o Seu Corpo "Travado"?</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div class="bg-red-50 p-4 rounded-2xl border border-red-100 shadow-inner">
-                    <!-- Imagem 3 (Dores) sem esticar -->
-                    <img src="pistola-massageadora-pme (3).png" alt="Pontos de dor no corpo" class="rounded-xl w-full">
+                <div class="bg-red-50 p-4 rounded-2xl border border-red-100 shadow-inner flex justify-center">
+                    <!-- Imagem 3 (Dores) mantida no tamanho original centralizada -->
+                    <img src="pistola-massageadora-pme (3).png" alt="Pontos de dor no corpo" class="rounded-xl w-auto mx-auto block">
                 </div>
                 
                 <div class="space-y-6">
@@ -143,9 +143,9 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i> <strong>Relaxamento profundo:</strong> Melhora a qualidade do sono.</li>
                     </ul>
                 </div>
-                <!-- Imagem 5 (Atletas/Aplicações) sem esticar -->
-                <div class="order-1 md:order-2 bg-white p-2 rounded-2xl shadow-xl border border-gray-200">
-                    <img src="pistola-massageadora-pme (5).png" alt="Aplicação em diversas áreas do corpo" class="w-full rounded-xl">
+                <!-- Imagem 5 (Atletas/Aplicações) mantida no tamanho original centralizada -->
+                <div class="order-1 md:order-2 bg-white p-4 rounded-2xl shadow-xl border border-gray-200 flex justify-center">
+                    <img src="pistola-massageadora-pme (5).png" alt="Aplicação em diversas áreas do corpo" class="w-auto mx-auto rounded-xl block">
                 </div>
             </div>
         </div>
@@ -159,21 +159,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Imagem 6 (6 Níveis / Benefícios) -->
                 <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (6).png" alt="6 níveis de intensidade" class="mb-4 h-48">
+                    <img src="pistola-massageadora-pme (6).png" alt="6 níveis de intensidade" class="mb-4 h-48 w-auto">
                     <h4 class="font-bold text-xl text-center mb-2">6 Níveis de Potência</h4>
                     <p class="text-center text-sm text-gray-600">Ajuste perfeitamente a força percussiva, do nível mais suave para o pescoço até o nível máximo para pernas e glúteos.</p>
                 </div>
 
                 <!-- Imagem 9 (Painel / Design) -->
                 <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (9).png" alt="Painel e ponteiras" class="mb-4 h-48">
+                    <img src="pistola-massageadora-pme (9).png" alt="Painel e ponteiras" class="mb-4 h-48 w-auto">
                     <h4 class="font-bold text-xl text-center mb-2">Motor Silencioso e Inteligente</h4>
                     <p class="text-center text-sm text-gray-600">Tecnologia anti-ruído avançada. Faça a sua massagem assistindo à TV ou no escritório sem incomodar ninguém.</p>
                 </div>
 
                 <!-- Imagem 2 (Bateria / Conexão) -->
                 <div class="bg-gray-50 rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-100 hover:shadow-lg transition">
-                    <img src="pistola-massageadora-pme (2).png" alt="Bateria e Carregamento" class="mb-4 h-48">
+                    <img src="pistola-massageadora-pme (2).png" alt="Bateria e Carregamento" class="mb-4 h-48 w-auto">
                     <h4 class="font-bold text-xl text-center mb-2">Bateria de Longa Duração</h4>
                     <p class="text-center text-sm text-gray-600">Bateria de lítio de 1800mAh. Carregamento universal via cabo USB para você recarregar facilmente em qualquer lugar.</p>
                 </div>
@@ -191,9 +191,9 @@
                     <h2 class="text-3xl font-heading font-extrabold mb-6 text-brand-gold">Uma Clínica de Massagem na Sua Mão</h2>
                     <p class="mb-8 text-gray-300">Acompanha 4 ponteiras intercambiáveis feitas de material premium para atingir cada grupo muscular da maneira correta.</p>
                     
-                    <div class="bg-white p-4 rounded-xl">
-                        <!-- Imagem 1 -->
-                        <img src="pistola-massageadora-pme (1).png" alt="As 4 Ponteiras" class="w-full">
+                    <div class="bg-white p-4 rounded-xl flex justify-center">
+                        <!-- Imagem 1 no tamanho original -->
+                        <img src="pistola-massageadora-pme (1).png" alt="As 4 Ponteiras" class="w-auto mx-auto block">
                     </div>
                 </div>
 
@@ -203,7 +203,7 @@
                         <h3 class="text-xl font-bold mb-4 text-center">Design Compacto e Ergonômico</h3>
                         <!-- Imagem 4 -->
                         <div class="bg-white rounded-xl p-4 flex justify-center">
-                            <img src="pistola-massageadora-pme (4).png" alt="Dimensões 23x13cm" class="max-h-64">
+                            <img src="pistola-massageadora-pme (4).png" alt="Dimensões 23x13cm" class="w-auto max-h-64 mx-auto block">
                         </div>
                         <p class="text-center text-gray-400 mt-4 text-sm">Apenas 23cm x 13cm. Perfeita para levar na bolsa da academia ou na mala de viagem.</p>
                     </div>
@@ -277,8 +277,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="w-full md:w-1/2 bg-white p-2 rounded-xl shadow-md border border-gray-100">
-                        <img src="pistola-massageadora-pme (8).png" alt="O que vem na caixa" class="w-full">
+                    <div class="w-full md:w-1/2 bg-white p-4 rounded-xl shadow-md border border-gray-100 flex justify-center">
+                        <img src="pistola-massageadora-pme (8).png" alt="O que vem na caixa" class="w-auto mx-auto block">
                     </div>
                 </div>
                 
