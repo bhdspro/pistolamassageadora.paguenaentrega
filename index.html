@@ -239,7 +239,7 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                 <div data-aos="fade-right">
-                    <img src="pme (7).webp" alt="Dimensões da Pistola" class="w-full max-w-md mx-auto rounded-xl shadow-2xl gold-glow">
+                    <img src="pme (7).png" alt="Dimensões da Pistola" class="w-full max-w-md mx-auto rounded-xl shadow-2xl gold-glow">
                 </div>
                 <div data-aos="fade-left">
                     <h3 class="text-2xl font-bold mb-4">O Fim das Dores em Qualquer Lugar</h3>
@@ -372,7 +372,7 @@
     </section>
 
     <!-- Pricing / Offer Section (CRITICAL PART) -->
-    <section id="oferta" class="py-24 relative overflow-hidden">
+    <section id="oferta" class="pt-24 pb-4 relative overflow-hidden">
         <!-- Spotlight background -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[120px] -z-10"></div>
 
@@ -384,109 +384,76 @@
                 </div>
             </div>
 
-            <!-- Flex container with items-stretch to match heights -->
+            <!-- Equalized Width Container -->
             <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
                 
                 <!-- Oferta 1: Pagar Agora (Desconto) -->
-                <div class="flex-1 bg-slate-800/80 rounded-3xl p-8 border border-slate-700 flex flex-col relative mt-8 md:mt-0 shadow-xl" data-aos="fade-right">
-                    <!-- Selo Padronizado Reduzido -->
-                    <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1 md:py-1.5 px-3 md:px-4 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[85%] md:w-auto text-center leading-tight z-20">
-                        <i class="ph-fill ph-tag text-xs md:text-base shrink-0"></i> 
-                        <span>Maior Desconto</span>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold mb-2">Pagamento Antecipado</h3>
-                    <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Economize Dinheiro! Compre agora no site e garanta o nosso maior desconto máximo aplicado.</p>
-                    
-                    <div class="mb-6">
-                        <!-- ANCORAGEM DE PREÇO CLARA -->
-                        <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
-                        <div class="text-5xl font-black text-white mb-2 leading-none">Por R$ 88<span class="text-2xl">,00</span></div>
-                        <div class="text-brand-green font-bold text-sm bg-brand-green/10 inline-block px-2 py-1 rounded">Você economiza R$ 92,00 hoje!</div>
-                    </div>
+                <div class="flex-1 basis-0 w-full" data-aos="fade-right">
+                    <div class="h-full bg-slate-800/80 rounded-3xl p-8 border border-slate-700 flex flex-col relative mt-8 md:mt-0 shadow-xl overflow-hidden">
+                        <!-- Selo Padronizado Reduzido -->
+                        <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1 md:py-1.5 px-3 md:px-4 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[85%] md:w-auto text-center leading-tight z-20">
+                            <i class="ph-fill ph-tag text-xs md:text-base shrink-0"></i> 
+                            <span>Maior Desconto</span>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mb-2">Pagamento Antecipado</h3>
+                        <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Economize Dinheiro! Compre agora no site e garanta o nosso maior desconto aplicado.</p>
+                        
+                        <div class="mb-6">
+                            <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
+                            <div class="text-5xl font-black text-white mb-2 leading-none">Por R$ 88<span class="text-2xl">,00</span></div>
+                            <div class="text-brand-green font-bold text-sm bg-brand-green/10 inline-block px-2 py-1 rounded">Você economiza R$ 92,00 hoje!</div>
+                        </div>
 
-                    <!-- Standardized list -->
-                    <ul class="space-y-4 mb-8 flex-1 text-base">
-                        <li class="flex items-center gap-3">
-                            <i class="ph-fill ph-check-circle text-brand-green text-2xl"></i> 
-                            <span class="text-slate-200">Pistola Completa + 4 Ponteiras</span>
-                        </li>
-                        <li class="flex items-center gap-3 font-bold text-brand-gold">
-                            <i class="ph-fill ph-truck text-brand-gold text-2xl"></i> 
-                            <span>Frete Grátis Todo Brasil</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="ph-fill ph-wallet text-brand-green text-2xl"></i> 
-                            <span class="text-slate-200">Pague com PIX, Cartão ou Dinheiro</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="ph-fill ph-shield-check text-brand-green text-2xl"></i> 
-                            <span class="text-slate-200">Garantia de 7 Dias</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="ph-fill ph-tag text-brand-green text-2xl"></i> 
-                            <span class="text-slate-200">Desconto Máximo Aplicado</span>
-                        </li>
-                    </ul>
+                        <ul class="space-y-4 mb-8 flex-1 text-base">
+                            <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-check-circle text-brand-green text-2xl"></i> Pistola Completa + 4 Ponteiras</li>
+                            <li class="flex items-center gap-3 font-bold text-brand-gold"><i class="ph-fill ph-truck text-brand-gold text-2xl"></i> Frete Grátis Todo Brasil</li>
+                            <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-wallet text-brand-green text-2xl"></i> PIX, Cartão ou Dinheiro</li>
+                            <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-shield-check text-brand-green text-2xl"></i> Garantia de 7 Dias</li>
+                            <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-tag text-brand-green text-2xl"></i> Desconto Máximo Aplicado</li>
+                        </ul>
 
-                    <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme88ant01-0" class="w-full block text-center bg-white hover:bg-slate-200 text-slate-900 font-black text-lg py-4 px-6 rounded-xl transition-colors uppercase tracking-wide">
-                        Quero Pagar Agora
-                    </a>
-                    <!-- Escassez -->
-                    <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 4 unidades no lote!</p>
+                        <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme88ant01-0" class="w-full block text-center bg-white hover:bg-slate-200 text-slate-900 font-black text-lg py-4 px-6 rounded-xl transition-colors uppercase tracking-wide">
+                            Quero Pagar Agora
+                        </a>
+                        <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 4 unidades!</p>
+                    </div>
                 </div>
 
                 <!-- Oferta 2: Pagar na Entrega (Hero Offer) -->
-                <div class="flex-1 bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-1 md:transform md:-translate-y-4 shadow-2xl gold-glow relative z-10 mt-8 md:mt-0" data-aos="fade-left">
-                    <!-- Selo Padronizado Reduzido -->
-                    <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-500 text-slate-900 text-[10px] md:text-xs font-bold uppercase tracking-wider py-1 md:py-1.5 px-3 md:px-4 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[85%] md:w-auto text-center leading-tight z-20">
-                        <i class="ph-fill ph-star text-xs md:text-base shrink-0"></i> 
-                        <span>Mais Escolhido</span>
-                    </div>
-                    
-                    <div class="bg-slate-900 rounded-[22px] p-8 h-full flex flex-col relative overflow-hidden">
-                        <!-- BG Effect -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-brand-green/10 rounded-full blur-[50px]"></div>
-
-                        <h3 class="text-2xl font-bold mb-2">Pague Só na Entrega</h3>
-                        <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Faça o pedido agora e <strong class="text-white">pague apenas para o entregador.</strong> Zero risco de fraudes!</p>
-                        
-                        <div class="mb-6">
-                            <!-- ANCORAGEM DE PREÇO CLARA -->
-                            <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
-                            <div class="text-5xl font-black text-brand-gold mb-2 leading-none">Por R$ 125<span class="text-3xl">,00</span></div>
-                            <div class="text-brand-gold font-bold text-sm bg-brand-gold/10 inline-block px-2 py-1 rounded">Risco zero: você toca no produto antes!</div>
+                <div class="flex-1 basis-0 w-full md:transform md:-translate-y-4" data-aos="fade-left">
+                    <div class="h-full bg-gradient-to-b from-slate-800 to-slate-900 rounded-3xl p-1 shadow-2xl gold-glow relative z-10">
+                        <!-- Selo Padronizado Reduzido -->
+                        <div class="absolute -top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-500 text-slate-900 text-[10px] md:text-xs font-bold uppercase tracking-wider py-1 md:py-1.5 px-3 md:px-4 rounded-full shadow-lg flex items-center justify-center gap-1 md:gap-2 w-[85%] md:w-auto text-center leading-tight z-20">
+                            <i class="ph-fill ph-star text-xs md:text-base shrink-0"></i> 
+                            <span>Mais Escolhido</span>
                         </div>
+                        
+                        <div class="bg-slate-900 rounded-[22px] p-8 h-full flex flex-col relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-green/10 rounded-full blur-[50px]"></div>
 
-                        <!-- Standardized list (Matching size and structure) -->
-                        <ul class="space-y-4 mb-8 flex-1 text-base">
-                            <li class="flex items-center gap-3">
-                                <i class="ph-fill ph-check-circle text-brand-green text-2xl"></i> 
-                                <span class="text-slate-200">Pistola Completa + 4 Ponteiras</span>
-                            </li>
-                            <li class="flex items-center gap-3 font-bold text-brand-gold">
-                                <i class="ph-fill ph-truck text-brand-gold text-2xl"></i> 
-                                <span>Frete Grátis Todo Brasil</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ph-fill ph-wallet text-brand-green text-2xl"></i> 
-                                <span class="text-slate-200">Pague com PIX, Cartão ou Dinheiro</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ph-fill ph-shield-check text-brand-green text-2xl"></i> 
-                                <span class="text-slate-200">Garantia de 7 Dias</span>
-                            </li>
-                            <li class="flex items-center gap-3 font-bold text-white">
-                                <i class="ph-fill ph-handshake text-brand-green text-2xl"></i> 
-                                <span>Segurança Total: Pague em mãos</span>
-                            </li>
-                        </ul>
+                            <h3 class="text-2xl font-bold mb-2">Pague Só na Entrega</h3>
+                            <p class="text-slate-400 text-sm mb-6 pb-6 border-b border-slate-700">Faça o pedido agora e <strong class="text-white">pague apenas para o entregador.</strong> Zero risco!</p>
+                            
+                            <div class="mb-6">
+                                <div class="text-slate-400 font-medium text-lg mb-1">De <span class="line-through text-red-400">R$ 180,00</span></div>
+                                <div class="text-5xl font-black text-brand-gold mb-2 leading-none">Por R$ 125<span class="text-3xl">,00</span></div>
+                                <div class="text-brand-gold font-bold text-sm bg-brand-gold/10 inline-block px-2 py-1 rounded">Risco zero: pague após receber!</div>
+                            </div>
 
-                        <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme125cod01-0" class="w-full block text-center bg-brand-green hover:bg-brand-greenHover text-white font-black text-lg py-4 px-6 rounded-xl btn-glow uppercase tracking-wide">
-                            Quero Pagar Depois
-                        </a>
-                        <!-- Escassez -->
-                        <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 7 agendamentos!</p>
+                            <ul class="space-y-4 mb-8 flex-1 text-base">
+                                <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-check-circle text-brand-green text-2xl"></i> Pistola Completa + 4 Ponteiras</li>
+                                <li class="flex items-center gap-3 font-bold text-brand-gold"><i class="ph-fill ph-truck text-brand-gold text-2xl"></i> Frete Grátis Todo Brasil</li>
+                                <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-wallet text-brand-green text-2xl"></i> PIX, Cartão ou Dinheiro</li>
+                                <li class="flex items-center gap-3 text-slate-200"><i class="ph-fill ph-shield-check text-brand-green text-2xl"></i> Garantia de 7 Dias</li>
+                                <li class="flex items-center gap-3 font-bold text-white"><i class="ph-fill ph-handshake text-brand-green text-2xl"></i> Segurança: Pague em mãos</li>
+                            </ul>
+
+                            <a href="https://app.coinzz.com.br/checkout/pistola-massageadora-pme125cod01-0" class="w-full block text-center bg-brand-green hover:bg-brand-greenHover text-white font-black text-lg py-4 px-6 rounded-xl btn-glow uppercase tracking-wide">
+                                Quero Pagar Depois
+                            </a>
+                            <p class="text-center text-xs font-bold text-red-400 mt-4 animate-pulse"><i class="ph-fill ph-fire"></i> Restam apenas 7 lotes!</p>
+                        </div>
                     </div>
                 </div>
 
@@ -494,7 +461,8 @@
         </div>
     </section>
 	
-	<section class="py-20">
+    <!-- Warranty Section (Tighter Spacing) -->
+	<section class="pt-0 pb-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-center gap-8 max-w-4xl mx-auto text-center md:text-left bg-brand-green/10 border border-brand-green/30 p-10 md:p-12 rounded-3xl shadow-[0_0_30px_rgba(16,185,129,0.1)]">
                 <i class="ph-fill ph-seal-check text-8xl md:text-9xl text-brand-gold drop-shadow-[0_0_20px_rgba(251,191,36,0.6)]"></i>
@@ -509,23 +477,20 @@
     <!-- FAQ / Objections -->
     <section class="py-16 bg-slate-900/50">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-10">Respostas Rápidas</h2>
+            <h2 class="text-3xl font-bold text-center mb-10 text-white">Respostas Rápidas</h2>
             
             <div class="space-y-4">
-                <!-- FAQ 1 -->
                 <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-brand-gold" data-aos="fade-up">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> Como funciona o "Pague na Entrega"?</h4>
-                    <p class="text-slate-400">Você só preenche o endereço no site. Enviamos o produto imediatamente sem cobrar nada. Quando o entregador bater na sua porta, você paga os R$ 125,00 diretamente para ele (PIX, Cartão ou Dinheiro). <strong class="text-white">Risco Zero de Golpes!</strong></p>
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2 text-white"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> Como funciona o "Pague na Entrega"?</h4>
+                    <p class="text-slate-400">Você preenche o endereço no site. Enviamos o produto. Quando o entregador chegar, você paga os R$ 125,00 diretamente para ele (PIX, Cartão ou Dinheiro). <strong class="text-white">Risco Zero de Golpes!</strong></p>
                 </div>
-                <!-- FAQ 2 -->
                 <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-brand-gold" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> O Frete é grátis mesmo?</h4>
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2 text-white"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> O Frete é grátis mesmo?</h4>
                     <p class="text-slate-400">Sim! O custo do envio é 100% por nossa conta para qualquer cidade do Brasil. Você paga apenas o valor da oferta.</p>
                 </div>
-                <!-- FAQ 3 -->
                 <div class="bg-slate-800 p-6 rounded-xl border-l-4 border-brand-gold" data-aos="fade-up" data-aos-delay="200">
-                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> Por que a oferta antecipada (R$ 88) é mais barata?</h4>
-                    <p class="text-slate-400">A opção de "Pagar na Entrega" possui taxas da transportadora e risco logístico. Se você confia e paga no Checkout do site via PIX/Cartão, nós cortamos essas taxas logísticas e repassamos o desconto total para o seu bolso!</p>
+                    <h4 class="font-bold text-lg mb-2 flex items-center gap-2 text-white"><i class="ph-fill ph-question text-brand-gold text-2xl"></i> Por que a oferta antecipada (R$ 88) é mais barata?</h4>
+                    <p class="text-slate-400">Pagar na entrega tem taxas de transporte e risco logístico. Se você pagar agora via PIX/Cartão, economizamos essas taxas e repassamos o desconto para você!</p>
                 </div>
             </div>
         </div>
@@ -535,47 +500,31 @@
     <footer class="bg-black py-8 border-t border-slate-900">
         <div class="container mx-auto px-4 text-center text-slate-600 text-sm">
             <p class="mb-4 flex items-center justify-center gap-2"><i class="ph-fill ph-lock-key text-lg"></i> Compra 100% Segura e Criptografada.</p>
-            <p>&copy; 2026 Pistola Massageadora Original. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Pistola Massageadora Oficial. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize Animations
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-        });
+        AOS.init({ duration: 800, once: true, offset: 100 });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
 
-        // Countdown Timer Logic
         function startTimer(duration, displayElements) {
             let timer = duration, minutes, seconds;
             setInterval(function () {
                 minutes = parseInt(timer / 60, 10);
                 seconds = parseInt(timer % 60, 10);
-
                 minutes = minutes < 10 ? "0" + minutes : minutes;
                 seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                displayElements.forEach(el => {
-                    el.textContent = minutes + ":" + seconds;
-                });
-
-                if (--timer < 0) {
-                    timer = duration; // Reset timer when hits 0 to maintain urgency loop
-                }
+                displayElements.forEach(el => { el.textContent = minutes + ":" + seconds; });
+                if (--timer < 0) { timer = duration; }
             }, 1000);
         }
 
