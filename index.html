@@ -260,7 +260,9 @@
             <!-- Heads Explanation -->
             <div class="mt-20">
                 <h3 class="text-center text-2xl font-bold mb-10">4 Ponteiras Para Cada Tipo de Dor</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-6">
                     <div class="bg-slate-800 p-6 rounded-xl text-center border border-slate-700 hover:border-brand-gold transition-colors flex flex-col items-center justify-center" data-aos="flip-left" data-aos-delay="0">
                         <div class="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center mb-4 border border-brand-gold/20 shadow-inner">
                             <i class="ph-fill ph-circle text-5xl text-brand-gold drop-shadow-lg"></i>
@@ -294,16 +296,15 @@
                         <p class="text-sm text-slate-400 mt-2">Soltura rápida de "nós" profundos.</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Image Carousel/Gallery -->
-            <div class="mt-20 overflow-x-auto hide-scrollbar flex gap-4 pb-8 md:justify-center snap-x w-full" data-aos="fade-up">
-                <img src="pme (1).png" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0 snap-center shadow-lg" alt="Produto Visão Geral">
-                <img src="pme (3).png" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0 snap-center shadow-lg" alt="Produto Detalhe Lado">
-                <img src="pme (4).png" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0 snap-center shadow-lg" alt="Acessórios e Botões">
-                <img src="pme (5).png" class="h-64 w-auto object-cover rounded-xl border border-slate-700 flex-shrink-0 snap-center shadow-lg" alt="Visor e Carregamento">
+                <!-- Images Grid (Alinhado exatamente com os cards) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full" data-aos="fade-up">
+                    <img src="pme (1).png" class="w-full aspect-square object-contain bg-white rounded-xl border border-slate-700 shadow-lg p-4" alt="Ponteira Esférica">
+                    <img src="pme (3).png" class="w-full aspect-square object-contain bg-white rounded-xl border border-slate-700 shadow-lg p-4" alt="Ponteira em U">
+                    <img src="pme (4).png" class="w-full aspect-square object-contain bg-white rounded-xl border border-slate-700 shadow-lg p-4" alt="Ponteira Plana">
+                    <img src="pme (5).png" class="w-full aspect-square object-contain bg-white rounded-xl border border-slate-700 shadow-lg p-4" alt="Ponteira Bala">
+                </div>
             </div>
-            <p class="text-center text-sm text-slate-500 mt-2"><i class="ph-bold ph-arrows-left-right text-lg align-middle"></i> Deslize para ver mais detalhes do produto</p>
         </div>
     </section>
 
